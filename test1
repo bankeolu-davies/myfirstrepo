@@ -1,0 +1,297 @@
+Test cases for vending machine
+
+Usability of the machine
+
+All control buttons are complete and visible
+All control buttons are working as expected (pressable and responsive)
+All items are present in the correct locations
+Labels are Correctly placed 
+Labels are correctly spelled
+Machine should display no amount at the initial stage of the transaction
+Machine should reset on completion of every transactions
+Transaction should terminate if there is power loss
+Acceptable currency(s) is clearly written on the machine
+Acceptable payment card(s) is clearly written on the machine
+Easily to be used by first time user
+Approprate lighting (Day or Night)
+
+
+
+
+
+
+
+
+
+Functional Test
+Positive Test
+Input money, select product, machine dispenses product, balance is deducted from the machine
+
+Negative test 
+Do not input money, select product, machine notifies the user for insufficient balance
+
+
+
+Multi-currency support			
+      Single currency 
+User inserted single denomination in the correct or exact amount in coin (acceptable denominations)  to the machine 
+	British Pound coin
+	or 
+	Euro coin
+User press button for the desired item(s)	
+And Item is available
+Correct Item is dispensed to the user
+			
+User inserted single denomination in the correct or exact amount in coin (Non-acceptable denominations)  to the machine 
+ Other types of currencies e.g dollar 
+User press button for the desired item(s)	
+And Item is available
+Appropraite error message is displayed to the user
+And Item is not dispensed to the user
+
+      Mixed of two diff currencies			
+
+User inserted BritishPound coins first followed by Euro coins
+And Item is available	
+User press button for the desired item(s)
+The euro is rejected 
+And appropraite error message is displayed to the user
+		
+User inserted Euro first 	followed by British pound coins
+And Item is available	
+User press button for the desired item(s)
+The british pound coin is rejected 
+And appropraite error message is displayed to the user
+
+User inserted Dollar cents first 	followed by any other coins
+And Item is available	
+User press button for the desired item(s)
+The all coins are rejected 
+Item is not dispensed to the user
+And appropraite error message is displayed to the user
+			
+User inserted no currency 
+User press button for the desired item(s)	
+Item is available	item 
+And appropraite error message is displayed to the user
+Item is not  dispensed to the user
+
+User inserted coin like  e.g token	
+User press button for the desired item(s)	
+Item is available	
+The token is rejected
+And appropraite error message is displayed to the user
+item is not  dispensed to the user 
+
+
+
+
+Dispensing Change			
+
+User inserts exact amount for a single item	
+User press button for the desired item(s)
+Item is available	
+Item is dispensed to the user
+No change is given to the user
+
+User inserts exact amount for multiple items
+User press button for the desired item(s)	
+Item is available
+Item is dispensed to the user
+No change is given to the user
+
+User inserted more money than the item cost
+User press button for the desired item(s)	
+Item is available	
+Item is dispensed to the user
+Correct change is given to the user
+
+User inserted Less amounts than the item cost
+User press button for the desired item(s)
+Item is available	
+item is not  dispensed to the user
+And machine displays the correct error message to user
+
+User inserted correct amount and cancels
+User press the cancel button
+No item is dispensed to the user
+Refund is given to the user
+Refund should be correct amount
+
+User inserted less amount 
+User press cancels button 
+No item is dispensed to the user
+Refund is given to the user
+Refund should be correct amount
+
+User inserted more amount 
+and User press cancels button
+No item is dispensed to the user
+Refund is given to the user
+Refund should be correct amount
+
+User inserted correct amount 
+User press button for the desired item(s)	
+Item is not available	
+No item is dispensed to the user
+Correct refund is given to the user 
+Appropraite error message is displayed (out of stock)
+
+user inserted money and did nothing for a long time
+User press button for the desired item(s)	
+Item is available	
+???
+
+
+Multiple vend			
+
+A single item	
+Correct amount is paid 	
+Item is available	
+A single item is dispensed to the user
+
+Multiple items
+
+(2,3,5)	Correct amount is paid 
+Item is available	
+Correct no of items are dispensed to user
+(2,3,5)
+
+Multiple of the same item (2 or more coke)
+Correct amount is paid 	
+Item is available	
+Correct items are dispensed(2 cokes)
+
+Multiple of the different items(product categories e.g coke, crisps, chocolate)	
+Correct amount is paid 
+Item(s) is /are available
+Correct items should be dispensed (coke, crisps, chocolate)
+			
+Multiple items all available	
+Wrong amount or currency is paid
+No item is dispensed to the user
+Correct error message is displayed to user
+Transaction is terminated
+
+Multiple items 	
+Correct amount is paid	
+one or more item(s) is out of stock
+Relevant message is displayed to the user stating the item(s) not instock
+User should get option to continue the transaction or terminates the transaction???
+
+
+User is given the option to continue or cancel	
+User chooses to continue with the transaction		
+Available items is dispensed to the user 
+correct balance is returned to the user
+			
+User is given the option to continue or cancel	
+User chooses to cancel the transaction		
+No items is dispensed to the user 
+correct balance is returned to the user
+
+Maximum items per purchase (If applicable) (equivalent partitioning +boundary value analysis)	
+Correct amount is paid	
+All items are available	
+Correct ordered items are dispensed to the user
+
+Over the maximum items per purchase (equivalent partitioning +boundary value analysis)			
+Appropriate error message is displayed to the user 
+(Over the max. Order )
+Reduce items to continue
+
+Many more scenarios to cover
+			
+
+Contactless payment (Covering credit, debit or/and prepaid cards)
+
+User Provides a valid (supported or acceptable)payment card with contactless functionality 	
+there is enough fund on the card	
+Transaction is successful
+Item is dispensed to user
+No change is given
+
+Provide valid (supported or acceptable)payment card with contactless functionality 	 
+Card has insufficient fund 	
+Transaction is declined 
+Item is not dispensed to user
+No change is given
+
+Provide valid (supported or acceptable)payment card with no contactless functionality 	???
+
+Provide (supported or acceptable)payment card with no contactless functionality	
+there is enough fund on the card	
+Transaction should be declined
+Item should not dispensed to user
+Appropraite error message is displayed(Card not supported)
+
+Provide (supported or acceptable)payment card with contactless functionality
+The card provided is expired	
+Transaction is be declined
+Item not not dispensed to user
+Appropraite error message is displayed(Card is expired)
+
+Provide (supported or acceptable)payment card with contactless functionality	
+The card provided is unactivated	
+Transaction is declined
+Item is not dispensed to user	
+Appropraite error message is displayed(Card is not activated)
+
+Provide payment card with contactless functionality
+The provided payment card  is not supported or acceptable	
+Transaction is declined
+Item is not dispensed to user
+Appropraite error message is displayed(Card not supported)
+
+Provide payment card with no contactless functionality
+The provided payment card  is not supported or acceptable	
+Transaction is declined
+Item is not dispensed to user
+Appropraite error message is displayed(Card not supported)
+
+
+		
+		
+### May not be applicable
+Placed less than minimum order value before payment card usage is allowed	
+When a valid payment card is provided 	
+The appropriate message should be displayed
+
+###(Minimum order not reached)
+Maximum purchase	Tbc	tbc
+Above the maximum order	tbc	tbc
+Powerloss		tbc
+
+
+
+
+Monitoring and alert (out of scope)Mechanical
+
+
+
+Questions
+
+which parts of the system are a priority to the business
+How many card provider(s) is acceptable or supported
+What are the requirements in place for anyone with impairment to be able to use the machine e.g voice interaction 
+What is the behaviour of the machine when
+	 offline
+	out of Item (s)
+What is the minimum order before card payment is allowed (if applicable)
+What is the maximum order per purchase or in a single transaction on the machine.
+Can machine accept card payment using PIN
+
+Is there a time  frame that transaction should be completed (response time)
+Does transaction expires if activity is not detected in x amount of time
+What is the result if after money is inserted and no further activity is detected.
+Can user pay using both cash and card in a single transaction
+
+
+What are the error messages expected
+
+
+
+
+
+
+
