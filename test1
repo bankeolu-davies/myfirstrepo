@@ -10,14 +10,13 @@ Labels are correctly spelled
 Machine should display no amount at the initial stage of the transaction
 Machine should reset on completion of every transactions
 Transaction should terminate if there is power loss
-Acceptable currency(s) is clearly written on the machine
+Transaction should not be responsive if there is no internet connection
+Acceptable currency(s) is clearly written on the machine and legible
 Acceptable payment card(s) is clearly written on the machine
-Easily to be used by first time user
+Ease  of use by  first time user
 Approprate lighting (Day or Night)
-
-
-
-
+Product security E.G  lock/ alarm on the machine
+Temperature should be regulated as expected or as required so that items dont go bad
 
 
 
@@ -25,7 +24,7 @@ Approprate lighting (Day or Night)
 
 Functional Test
 Positive Test
-Input money, select product, machine dispenses product, balance is deducted from the machine
+Input money, select product, machine dispenses product, balance is deducted from the machine 
 
 Negative test 
 Do not input money, select product, machine notifies the user for insufficient balance
@@ -272,6 +271,7 @@ Monitoring and alert (out of scope)Mechanical
 Questions
 
 which parts of the system are a priority to the business
+The machine accept all coins, does that include the smallest denominations e.g 1p,2p e.t.c
 How many card provider(s) is acceptable or supported
 What are the requirements in place for anyone with impairment to be able to use the machine e.g voice interaction 
 What is the behaviour of the machine when
