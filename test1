@@ -1,3 +1,6 @@
+(Some typo errors on the user stories)
+
+
 Test cases for vending machine
 
 Usability of the machine
@@ -56,13 +59,13 @@ User press button for the desired item(s)
 The euro is rejected 
 And appropraite error message is displayed to the user
 		
-User inserted Euro first 	followed by British pound coins
+User inserted Euro first followed by British pound coins
 And Item is available	
 User press button for the desired item(s)
 The british pound coin is rejected 
 And appropraite error message is displayed to the user
 
-User inserted Dollar cents first 	followed by any other coins
+User inserted Dollar cents first followed by any other coins
 And Item is available	
 User press button for the desired item(s)
 The all coins are rejected 
@@ -71,7 +74,7 @@ And appropraite error message is displayed to the user
 			
 User inserted no currency 
 User press button for the desired item(s)	
-Item is available	item 
+Item is available item 
 And appropraite error message is displayed to the user
 Item is not  dispensed to the user
 
@@ -95,8 +98,8 @@ No change is given to the user
 
 User inserts exact amount for multiple items
 User press button for the desired item(s)	
-Item is available
-Item is dispensed to the user
+Items are available
+Items are dispensed to the user
 No change is given to the user
 
 User inserted more money than the item cost
@@ -111,7 +114,7 @@ Item is available
 item is not  dispensed to the user
 And machine displays the correct error message to user
 
-User inserted correct amount and cancels
+User inserted correct amount 
 User press the cancel button
 No item is dispensed to the user
 Refund is given to the user
@@ -153,24 +156,25 @@ Multiple items
 
 (2,3,5)	Correct amount is paid 
 Item is available	
-Correct no of items are dispensed to user
+Correct number of items are dispensed to user
 (2,3,5)
 
-Multiple of the same item (2 or more coke)
+Multiple of the same item (2 or more "drinks")
 Correct amount is paid 	
 Item is available	
-Correct items are dispensed(2 cokes)
+Correct items are dispensed(2 drinks)
 
-Multiple of the different items(product categories e.g coke, crisps, chocolate)	
+Multiple of the different items(product categories e.g drinks, crisps, chocolate)	
 Correct amount is paid 
 Item(s) is /are available
-Correct items should be dispensed (coke, crisps, chocolate)
+Correct items should be dispensed (drinks, crisps, chocolate)
 			
 Multiple items all available	
 Wrong amount or currency is paid
 No item is dispensed to the user
 Correct error message is displayed to user
 Transaction is terminated
+Payment is rejected
 
 Multiple items 	
 Correct amount is paid	
@@ -221,13 +225,13 @@ Provide valid (supported or acceptable)payment card with no contactless function
 Provide (supported or acceptable)payment card with no contactless functionality	
 there is enough fund on the card	
 Transaction should be declined
-Item should not dispensed to user
+Item should not be dispensed to user
 Appropraite error message is displayed(Card not supported)
 
 Provide (supported or acceptable)payment card with contactless functionality
 The card provided is expired	
 Transaction is be declined
-Item not not dispensed to user
+Item not dispensed to user
 Appropraite error message is displayed(Card is expired)
 
 Provide (supported or acceptable)payment card with contactless functionality	
@@ -237,19 +241,17 @@ Item is not dispensed to user
 Appropraite error message is displayed(Card is not activated)
 
 Provide payment card with contactless functionality
-The provided payment card  is not supported or acceptable	
+The provided payment card  is not supported or acceptable (in other currencies)	
 Transaction is declined
 Item is not dispensed to user
-Appropraite error message is displayed(Card not supported)
+Appropraite error message is displayed(Card not supported )
 
 Provide payment card with no contactless functionality
 The provided payment card  is not supported or acceptable	
 Transaction is declined
 Item is not dispensed to user
-Appropraite error message is displayed(Card not supported)
-
-
-		
+Appropraite error message is displayed(currency not supported)
+	
 		
 ### May not be applicable
 Placed less than minimum order value before payment card usage is allowed	
@@ -257,10 +259,9 @@ When a valid payment card is provided
 The appropriate message should be displayed
 
 ###(Minimum order not reached)
-Maximum purchase	Tbc	tbc
-Above the maximum order	tbc	tbc
-Powerloss		tbc
-
+Maximum purchase	(to be clarified)	
+Above the maximum order	(to be clarified)	
+Powerloss		(to be clarified)
 
 
 
@@ -270,21 +271,25 @@ Monitoring and alert (out of scope)Mechanical
 
 Questions
 
-which parts of the system are a priority to the business
+which parts of the system is a priority to the business
 The machine accept all coins, does that include the smallest denominations e.g 1p,2p e.t.c
-How many card provider(s) is acceptable or supported
+Does machine accepts Note(paper money)
+How many card provider(s) is/are acceptable or supported
 What are the requirements in place for anyone with impairment to be able to use the machine e.g voice interaction 
 What is the behaviour of the machine when
 	 offline
-	out of Item (s)
+	out of Item(s)
+	Out of change
 What is the minimum order before card payment is allowed (if applicable)
-What is the maximum order per purchase or in a single transaction on the machine.
+What is the maximum order per purchase in a single transaction on the machine.
 Can machine accept card payment using PIN
 
 Is there a time  frame that transaction should be completed (response time)
 Does transaction expires if activity is not detected in x amount of time
 What is the result if after money is inserted and no further activity is detected.
 Can user pay using both cash and card in a single transaction
+Whats the happens if payment is made and product is not dispensed 
+or single item is paid for but multiple items are dispensed.
 
 
 What are the error messages expected
